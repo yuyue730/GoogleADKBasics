@@ -17,26 +17,33 @@ https://aistudio.google.com/ to create the API Key.
 
 ## Basic Agent
 
-Create the most basic [`greenting_agent`](./BasicAgent/greeting_agent/) agent which asks for user's 
-name and greets the user.
-
-Execute `adk web` to debug the agent. See the following screenshot on the behavior.
+Create the most basic [`greenting_agent`](./BasicAgent/greeting_agent/) agent which asks for 
+username and greets the user. Execute `adk web` to debug the agent.
 
 ## Tool Agent
 
 ### Built-in tools
 
-In [this example](./ToolAgent/google_search_tool_agent/agent.py), an agent which has access to the `google_search` internal tool is implemented. See this example:
+In [this example](./ToolAgent/google_search_tool_agent/agent.py), an agent which has access to the `google_search` internal tool is implemented. See this screenshot:
 
 ![Google Search Build-in tool example](./Screenshots/GoogleSearchBuiltInTool.png)
 
 ### Function tools
 
 In [this example](./ToolAgent/two_function_tools_agent/agent.py), an agent which queries 
-Database for order and inventory status is implemented. See this example:
+Database for order and inventory status is implemented. See this screenshot:
 
 ![Query order inventory tool example](./Screenshots/TwoFunctionTools.png)
 
 ### Third Party tools
 
 Agent could also be designed to integrate tools from other AI Agent frameworks like LangChain.
+
+## LiteLLM
+
+Register a https://openrouter.ai/ account and add some credit, then create an API Key and put 
+it in the `.env` file in the agent's directory.
+
+In [this example](./LiteLLMAgent/dad_joke_agent/agent.py), an agent which asks Open AI gpt-4.1-nano model to execute `get_dad_joke()` tool is implemented. See this screenshot:
+
+![LiteLLM tool example](./Screenshots/LiteLLMTool.png)
