@@ -12,4 +12,12 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Go to https://console.cloud.google.com to create a new Google Cloud project, then go to https://aistudio.google.com/ to create the API Key.
+Go to https://console.cloud.google.com to create a new Google Cloud project, then go to
+https://aistudio.google.com/ to create the API Key.
+
+## Basic Agent
+
+Create the most basic [`greenting_agent`](./BasicAgent/greeting_agent/) agent which asks for user's 
+name and greets the user.
+
+Execute `adk web` to debug the agent. See the following screenshot on the behavior.
