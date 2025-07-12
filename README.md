@@ -21,3 +21,11 @@ Create the most basic [`greenting_agent`](./BasicAgent/greeting_agent/) agent wh
 name and greets the user.
 
 Execute `adk web` to debug the agent. See the following screenshot on the behavior.
+
+## Tool Agent
+
+### Built-in tools
+
+In [this example](./ToolAgent/google_search_tool_agent/agent.py), I added an agent which has access to the `google_search` internal tool. See this example:
+
+![Google Search Build-in tool example](./Screenshots/GoogleSearchBuiltInTool.png)
