@@ -26,6 +26,17 @@ Execute `adk web` to debug the agent. See the following screenshot on the behavi
 
 ### Built-in tools
 
-In [this example](./ToolAgent/google_search_tool_agent/agent.py), I added an agent which has access to the `google_search` internal tool. See this example:
+In [this example](./ToolAgent/google_search_tool_agent/agent.py), an agent which has access to the `google_search` internal tool is implemented. See this example:
 
 ![Google Search Build-in tool example](./Screenshots/GoogleSearchBuiltInTool.png)
+
+### Function tools
+
+In [this example](./ToolAgent/two_function_tools_agent/agent.py), an agent which queries 
+Database for order and inventory status is implemented. See this example:
+
+![Query order inventory tool example](./Screenshots/TwoFunctionTools.png)
+
+### Third Party tools
+
+Agent could also be designed to integrate tools from other AI Agent frameworks like LangChain.
