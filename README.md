@@ -47,3 +47,13 @@ it in the `.env` file in the agent's directory.
 In [this example](./LiteLLMAgent/dad_joke_agent/agent.py), an agent which asks Open AI gpt-4.1-nano model to execute `get_dad_joke()` tool is implemented. See this screenshot:
 
 ![LiteLLM tool example](./Screenshots/LiteLLMTool.png)
+
+## Structring Data
+
+* `input_schema` (Optional): Expected input structure. This might not be very useful.
+* `output_schema` (Optional but highly recommended): Define a schema representing the desired output structure. If set, the agent's final response must be a JSON string conforming to this schema.
+* `output_key` (Optional): If set, the text content of the agent's final response is automatically saved to the session's state dictionary under the `output_key`. See the screenshots below:
+
+![Example Structured Output Conversation](./Screenshots/StructuredOutput_Conversation.png)
+![Example Structured Output Request](./Screenshots/StructuredOutput_Request.png)
+![Example Structured Output Response](./Screenshots/StructuredOutput_Response.png)
