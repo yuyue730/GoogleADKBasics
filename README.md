@@ -117,3 +117,23 @@ Tools per `LLM`'s response. Runner also updates the Session, including State and
   * Step 3.7: `Agent_Llm` receives the final text from `LLM`, wraps it in the response to the 
   `Runner`.
 * Step 4: `Runner` responds the final result / completion to the user.
+
+In [this example](./BasicStatefulSession/basic_stateful_session.py), a `InMemorySessionService` 
+is created. And it asks
+[the Question Answering Agent](./BasicStatefulSession/question_answering_agent/agent.py) a 
+question about the user's preference. The user's preference is provided to the LLM in the system
+prompt. See its execution output below:
+
+```
+% python basic_stateful_session.py
+A new session has been created. Session ID: 7f39473e-247b-4fa6-be79-cd65337f48d9
+Final response: Yue's favorite TV show is The Big Bang Theory.
+
+===== Session Event Exploration: Final Session State =====
+user_name: Yue Yu
+user_preference: 
+    I like to play tennis and soccer.
+    My favourite food is Chinese.
+    My favourite TV show is The Big Bang Theory.
+    Loves it when other engineers approve and merge his Pull Requests.
+```
