@@ -91,11 +91,11 @@ Last Update (`last_update_time`): 1752375458.8551521
 * `SessionService` -- The central manager responsible for the entire lifecycle of the 
 conversation sessions.
 
-[//]: # (TODO: Add an image showing the structure of a `SeSessionService` object)
+**TODO: Add an image showing the structure of a `SeSessionService` object.**
 
 ### Runner
 
-[//]: # (TODO: Add an image showing the `Runner` workflow)
+**TODO: Add an image showing the `Runner` workflow.**
 
 * Step 1: `User` sends the query (`user_message`) to the Runner
 * Step 2. Runner loads or creates the session and add appends `user_message` to the session 
@@ -137,3 +137,11 @@ user_preference:
     My favourite TV show is The Big Bang Theory.
     Loves it when other engineers approve and merge his Pull Requests.
 ```
+
+## Persistent Storage
+
+In [this example](./PersistentStorage/main.py), a `DatabaseSessionService` is created and it 
+interacts with [the Memory Agent](./PersistentStorage/memory_agent/agent.py) to manage a reminder
+list. See the test case below:
+
+**TODO: Write a few test scenarios to prove this example works.**
