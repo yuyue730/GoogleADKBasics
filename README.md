@@ -150,24 +150,34 @@ list. See the test case below:
 
 * A Multi-Agent System is an advanced pattern in the ADK that allows multiple sepcialized agents to 
 work together to handle complex tasks.
-* **TODO: Plot the diagram after the example implementation finishes.**
 * Difference between Agent-as-a-tool and Sub-agent:
   * When Agent A calls Agent B as a tool (using Agent-as-a-tool). Agent B's answer is passed back 
   to agent A, which then summarizes the answer and generates a response to the user. **Agent A 
   retains control and continues to handle future user input.**
   * Sub-agent: When Agent A calls Agent B as a sub-agent, **the responsibility of answering the 
   user is completely transferred to Agent B**. Agent A is out of the loop.
-* Example: Please tell me a funny joke. Then get the latest price of Microsoft, and its latest news:
+* [Example](./MultiAgentsSystem/root_agent/agent.py)
+  * Below is the system diagram for this example:
+
+  <img src="./Screenshots/MultiAgent_SystemDiagram.png" width="400">
+
+    * Note: `news_analyst` can only be an `AgentTool` in that it calls the built-in tool.
+  * General workflow: Please tell me a funny joke. Then get the latest price of Microsoft, and its 
+  latest news:
   * Due to `funny_nerd` is designed as a Sub-agent. The `root agent` takes a `transfer_to_agent` 
   action .
   * The `funny_nerd` decides to use the `get_nerd_joke` tool to return the corresponding joke to 
-  the input topic.
-  * See the screenshot below:
-  ![Transfer to Sub-Agent Example](./Screenshots/MultiAgent_JokeExample.png)
+  the input topic. See the screenshot below:
+
+  <img src="./Screenshots/MultiAgent_JokeExample.png" width="600">
+  
   * Then, I asked the agent to provide the latest Microsoft stock price. It is able to automatically
-  transfer to `stock_analyst` agent and utilize the `get_stock_price` tool. See screenshot below: \
+  transfer to `stock_analyst` agent and utilize the `get_stock_price` tool. See screenshot below:
+
   <img src="./Screenshots/MultiAgent_TransferToStockAnalyst.png" width="600">
+
   * Finally, I asked the latest news on Microsoft. Initially, the agent unable to perform. I asked 
   it to delegate the the root agent. It does a `transfer_to_agent` action and use the underlying 
-  `google_search` tool: \
+  `google_search` tool. See the screenshot below:
+
   <img src="./Screenshots/MultiAgent_LastestNewsOnMSFT.png" width="600">
