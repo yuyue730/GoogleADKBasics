@@ -192,3 +192,20 @@ work together to handle complex tasks.
   * Question 3: Then I want to buy the Advanced AI course.
   * Question 4: What is the content for Introduction to AI?
   * Question 5: I don't want to take Hands-on AI course anymore, can you do me a refund?
+
+## Callbacks
+
+* The diagram below shows the how different callbacks are defined:
+
+  <img src="./Screenshots/Callbacks_Diagram.png" width="600">
+
+* Agent Lifecycle Callbacks
+  * `before_agent_callback`: Runs right before the main logic of the agent starts. Useful for tasks 
+  like setting up initial resources, validating session state, or logging the start of the agent's 
+  activity. Can be used to skip the agent's execution entirely and provide an immediate response.
+  * `after_agent_callback`: After the agent has finished its processing and has a final response 
+  ready. A great place to modify the final output.
+  * Demo on [the example](./Callbacks/before_after_agent/agent.py):
+
+    <img src="./Screenshots/Callbacks_BeforeAfterAgent.png" width="600">
+    
