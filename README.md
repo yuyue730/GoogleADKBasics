@@ -181,3 +181,14 @@ work together to handle complex tasks.
   `google_search` tool. See the screenshot below:
 
   <img src="./Screenshots/MultiAgent_LastestNewsOnMSFT.png" width="600">
+
+## Stateful Multi Agent System
+
+**TODO: Add some basic concepts about Stateful Multi Agent System.**
+
+* Test cases:
+  * Question 1: Can you please buy Intro to AI course for me?
+  * Question 2: Can I kindly ask the content for Advanced AI course?
+  * Question 3: Then I want to buy the Advanced AI course.
+  * Question 4: What is the content for Introduction to AI?
+  * Question 5: I don't want to take Hands-on AI course anymore, can you do me a refund?
