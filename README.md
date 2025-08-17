@@ -208,4 +208,26 @@ work together to handle complex tasks.
   * Demo on [the example](./Callbacks/before_after_agent/agent.py):
 
     <img src="./Screenshots/Callbacks_BeforeAfterAgent.png" width="600">
-    
+
+* llm Interaction Callbacks
+  * `before_model_callback`: Triggered just before the request is sent to the LLM. Used to modify 
+  the prompt, add or remove information, or even prevent the call to the LLM by providing a cached 
+  or predefined response. Usefor for implementing input guardrails and sanitization.
+  * `after_model_callback`: Runs immediately after a response is received from the LLM. Used to 
+  inspect, sanitize or reformat the LLM's raw output before used by the agent.
+  * Demo on [the example](./Callbacks/before_after_model/agent.py):
+
+    <img src="./Screenshots/Callbacks_BeforeAfterModel.png" width="600">
+
+* Tool Execution Callbacks
+  * `before_tool_callback`: Executed before a tool is called. Ideal for validating the arguments 
+  passed to the tool, enforcing policies or returning a mocked or cached result to avoid executing 
+  the actual tool.
+  * `after_tool_callback`: Triggered after a tool has been executed and has returned a result. Use 
+  it to post-process the tool's output.
+
+## Sequential Agent
+
+## Parallel Agent
+
+## Loop Agent
